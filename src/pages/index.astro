@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Architecture d'Impact Direct">
+	<!-- Hero Section Style Éducatif / Environnemental -->
+	<section class="relative min-h-[90vh] flex items-center justify-center bg-[#0D1F17] overflow-hidden px-6">
+		<div class="absolute inset-0 opacity-20 mix-blend-multiply filter grayscale contrast-125">
+			<img src="/images/seedlings group.jpg" alt="EJBM Green Stewardship Collective" class="w-full h-full object-cover" />
+		</div>
+		<div class="relative max-w-5xl mx-auto text-center z-10 py-20">
+			<span class="inline-block border border-[#52B788] text-[#74C69D] uppercase tracking-widest text-xs font-bold px-4 py-1.5 rounded-full mb-6">
+				L'Inaction n'est plus une Option[cite: 1]
+			</span>
+			<h1 class="font-serif text-4xl md:text-7xl text-white font-medium tracking-tight mb-8 leading-[1.1]">
+				Nous devenons les <span class="italic text-[#74C69D]">architectes engagés</span> de notre nation[cite: 1]
+			</h1>
+			<p class="text-xl text-stone-300 max-w-3xl mx-auto mb-10 font-light leading-relaxed">
+				Le développement de notre nation ne peut plus reposer sur la seule attente de l'État, mais sur l'engagement sincère de chaque jeune.[cite: 1]
+			</p>
+			<div class="flex flex-col sm:flex-row justify-center gap-4">
+				<a href="/programs" class="bg-[#2D6A4F] text-white font-medium px-8 py-4 rounded-full hover:bg-[#1B4332] transition-all shadow-lg text-base">
+					Découvrir nos actions[cite: 1, 2]
+				</a>
+				<a href="/about" class="border border-white/20 text-white font-medium px-8 py-4 rounded-full hover:bg-white/10 transition-all backdrop-blur-sm text-base">
+					Notre manifeste citoyen[cite: 1, 2]
+				</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Média & Impact Hybride Intégrée -->
+	<section class="py-24 px-6 max-w-7xl mx-auto">
+		<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+			<div class="lg:col-span-5 space-y-6">
+				<div class="text-xs font-bold uppercase tracking-widest text-[#2D6A4F]">Gouvernance Participative[cite: 1]</div>
+				<h2 class="font-serif text-3xl md:text-5xl tracking-tight text-stone-900 leading-tight">
+					Transformer l'élan collectif en <span class="italic">impact tangible</span>[cite: 1]
+				</h2>
+				<p class="text-stone-600 leading-relaxed">
+					En unissant nos forces autour d'actions sociales, humanitaires et environnementales, nous transformons de simples idées en avancées communautaires directes. Chaque arbre planté, chaque jeune formé est un pilier de la construction nationale.[cite: 1, 2]
+				</p>
+				<div class="pt-4 border-t border-stone-200 grid grid-cols-2 gap-6">
+					<div>
+						<div class="text-3xl font-bold text-stone-900">100%</div>
+						<div class="text-xs text-stone-500 mt-1 uppercase tracking-wider font-semibold">Transparence et Intégrité[cite: 2]</div>
+					</div>
+					<div>
+						<div class="text-3xl font-bold text-[#2D6A4F]">+18 ans</div>
+						<div class="text-xs text-stone-500 mt-1 uppercase tracking-wider font-semibold">Citoyens Responsables Actifs[cite: 2]</div>
+					</div>
+				</div>
+			</div>
+			<div class="lg:col-span-7 grid grid-cols-12 gap-4">
+				<div class="col-span-7 aspect-[4/5] rounded-2xl overflow-hidden shadow-md">
+					<img src="/images/Child planting.jpg" alt="Child planting tree EJBM" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+				</div>
+				<div class="col-span-5 space-y-4">
+					<div class="aspect-square rounded-2xl overflow-hidden shadow-md">
+						<img src="/images/togbe watering.jpg" alt="Togbe watering plants EJBM" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+					</div>
+					<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-md bg-stone-100">
+						<img src="/images/dion smiling1.jpg" alt="EJBM community leader engagement" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Section Les 5 Piliers Stratégiques -->
+	<section class="bg-stone-100 py-24 px-6 border-y border-stone-200">
+		<div class="max-w-7xl mx-auto">
+			<div class="text-center max-w-2xl mx-auto mb-16">
+				<h2 class="font-serif text-3xl md:text-5xl tracking-tight mb-4 text-stone-900">Les 5 Piliers de l'EJBM[cite: 1]</h2>
+				<p class="text-stone-600 text-sm md:text-base">Notre plan d’action repose sur des fondations solides pour un impact mesurable et durable.[cite: 1, 2]</p>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+				{[
+					{ num: "01", title: "Connaissance Juridique", desc: "Maîtriser les textes fondamentaux et lois de la République du Bénin." },
+					{ num: "02", title: "Enjeux de Développement", desc: "Comprendre de manière lucide les défis socio-économiques contemporains." },
+					{ num: "03", title: "Patriotisme Pratique", desc: "Agir au quotidien pour la salubrité publique et l'écosystème local." },
+					{ num: "04", title: "Action Solidaire", desc: "Déployer des interventions humanitaires directes auprès des plus démunis." },
+					{ num: "05", title: "Éthique Publique", desc: "Mobiliser la communauté pour le respect absolu et la protection du bien public." }
+				].map(p => (
+					<div class="bg-white p-8 rounded-2xl border border-stone-200/60 shadow-sm hover:shadow-md transition-shadow flex flex-col justify-between">
+						<div>
+							<div class="text-xs font-mono font-bold text-[#2D6A4F] mb-6">{p.num}[cite: 1]</div>
+							<h3 class="font-bold text-stone-900 tracking-tight text-lg mb-3">{p.title}[cite: 1]</h3>
+						</div>
+						<p class="text-stone-500 text-xs md:text-sm leading-relaxed mt-4">{p.desc}[cite: 1]</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+</Layout>
