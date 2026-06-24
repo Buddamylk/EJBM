@@ -1,0 +1,20 @@
+backend:
+  name: github
+  repo: your-username/ejbm-website
+  branch: main
+
+media_folder: "public/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages Content"
+    files:
+      - file: "src/content/homepage.md"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - { label: "Hero Title", name: "heroTitle", widget: "string" }
+          - { label: "Hero Subtitle", name: "heroSubtitle", widget: "text" }
+          - { label: "Impact Stat Volunteers", name: "statVolunteers", widget: "string" }
+          - { label: "Impact Stat Trees", name: "statTrees", widget: "string" }
