@@ -6,24 +6,39 @@ on:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
+  pages: write      # <-- This must be here!
+  id-token: write   # <-- This must be here!
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          
+      - name: Install Project Dependencies
+        run: npm install
+        
+      - name: Compile Static Distribution Bundle
+        run: npx --yes astro build
+
+      - name: Upload Finished Artifacts
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout Source Code
-        uses: actions/checkout@v4
-
-      - name: Upload Finished Artifacts
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .  # This tells the robot to look at your main folder!
-
       - name: Publish Live to GitHub Pages CDN
         id: deployment
         uses: actions/deploy-pages@v4
