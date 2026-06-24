@@ -1,0 +1,80 @@
+---
+interface Props {
+	title: string;
+}
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Élan des Jeunes pour un Bénin Meilleur (EJBM) - Bâtir un Bénin prospère et solidaire par l'engagement de sa jeunesse." />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+		<title>{title} | EJBM</title>
+	</head>
+	<body class="bg-[#FBFBFA] text-[#1C2826] font-sans antialiased">
+		<nav class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-stone-200 px-6 py-4 transition-all">
+			<div class="max-w-7xl mx-auto flex justify-between items-center">
+				<a href="/" class="group flex items-center gap-3">
+					<div class="w-10 h-10 bg-[#1B4332] rounded-full flex items-center justify-center text-white font-bold tracking-tighter text-sm">BJ</div>
+					<div>
+						<span class="block font-bold tracking-tight text-stone-900 group-hover:text-[#2D6A4F] transition-colors">EJBM</span>
+						<span class="block text-[10px] uppercase tracking-widest text-stone-500 font-semibold">Élan des Jeunes</span>
+					</div>
+				</a>
+				<div class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+					<a href="/about" class="hover:text-stone-900 transition-colors">Notre Vision</a>
+					<a href="/programs" class="hover:text-stone-900 transition-colors">Impact & Programmes</a>
+					<a href="/contact" class="hover:text-stone-900 transition-colors">Rejoindre L'Élan</a>
+					<a href="/contact" class="bg-[#1B4332] text-white px-5 py-2.5 rounded-full hover:bg-[#2D6A4F] transition-all transform hover:-translate-y-0.5 shadow-sm">Devenir Bénévole</a>
+				</div>
+			</div>
+		</nav>
+
+		<main class="min-h-screen">
+			<slot />
+		</main>
+
+		<footer class="bg-[#0D1F17] text-stone-300 py-16 px-6 border-t border-stone-800">
+			<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
+				<div>
+					<div class="text-white font-bold text-xl mb-4">EJBM</div>
+					<p class="text-sm text-stone-400 leading-relaxed max-w-sm">
+						Transform r l'élan de la jeunesse en un levier concret de développement et de bonne gouvernance au sein de nos communautés.[cite: 1]
+					</p>
+				</div>
+				<div>
+					<h4 class="text-white text-sm font-semibold tracking-wider uppercase mb-4">Canaux Officiels</h4>
+					<ul class="text-sm space-y-2 text-stone-400">
+						<li>E-mail: ejbm.bj@gmail.com[cite: 1]</li>
+						<li>Tél: +229 01 97 67 66 01[cite: 1]</li>
+						<li>Siège Social: République du Bénin[cite: 1, 2]</li>
+					</ul>
+				</div>
+				<div>
+					<h4 class="text-white text-sm font-semibold tracking-wider uppercase mb-4">Gouvernance Structurée</h4>
+					<p class="text-sm text-stone-400 leading-relaxed">
+						Association déclarée régie par des principes de transparence, d'éthique et de neutralité active pour le progrès national.[cite: 1, 2]
+					</p>
+				</div>
+			</div>
+			<div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-stone-800 text-center text-xs text-stone-500">
+				&copy; {new Date().getFullYear()} EJBM Officiel. Tous droits réservés.[cite: 1]
+			</div>
+		</footer>
+	</body>
+</html>
+
+<style is:global>
+	body {
+		font-family: 'Plus Jakarta Sans', sans-serif;
+	}
+	.font-serif {
+		font-family: 'Playfair Display', serif;
+	}
+</style>
