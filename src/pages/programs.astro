@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Programmes Opérationnels d'Impact">
+	<section class="py-24 px-6 max-w-7xl mx-auto">
+		<div class="max-w-3xl mb-16">
+			<span class="text-xs font-bold uppercase tracking-widest text-[#2D6A4F] block mb-4">Actions de Terrain Directes[cite: 1, 2]</span>
+			<h1 class="font-serif text-4xl md:text-6xl text-stone-900 tracking-tight">Des interventions ciblées pour un développement communautaire fiable[cite: 1]</h1>
+		</div>
+
+		<!-- Catalogue des programmes avec mise en page éditoriale alternée -->
+		<div class="space-y-32">
+			<!-- Programme 1 -->
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+				<div class="lg:col-span-6 space-y-6">
+					<span class="text-xs font-mono font-bold px-3 py-1 bg-stone-100 border border-stone-200 rounded-md text-stone-600">Axe Écologique Majeur[cite: 1, 2]</span>
+					<h2 class="font-serif text-2xl md:text-4xl text-stone-900">Salubrité Publique & Reboisement Éco-Citoyen[cite: 1]</h2>
+					<p class="text-stone-600 text-sm md:text-base leading-relaxed">
+						Création systématique de journées de sensibilisation environnementale active[cite: 1]. Nous mobilisons les forces vives pour la plantation d'arbres à grande échelle et le maintien d'un cadre de vie sain au sein des localités[cite: 1, 2].
+					</p>
+				</div>
+				<div class="lg:col-span-6 aspect-video rounded-2xl overflow-hidden shadow-md">
+					<img src="/images/school safety.jpg" alt="School environment safety program EJBM" class="w-full h-full object-cover" />
+				</div>
+			</div>
+
+			<!-- Programme 2 -->
+			<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center lg:flex-row-reverse">
+				<div class="lg:col-span-6 lg:order-2 space-y-6">
+					<span class="text-xs font-mono font-bold px-3 py-1 bg-stone-100 border border-stone-200 rounded-md text-stone-600">Axe Humanitaire et Social[cite: 1, 2]</span>
+					<h2 class="font-serif text-2xl md:text-4xl text-stone-900">Assistance Sociale aux Personnes Vulnérables[cite: 1, 2]</h2>
+					<p class="text-stone-600 text-sm md:text-base leading-relaxed">
+						Organisation de collectes de fonds, dons de kits scolaires et de matériel d'assistance pour les orphelins et les personnes vivant avec un handicap à travers les départements[cite: 1, 2].
+					</p>
+				</div>
+				<div class="lg:col-span-6 lg:order-1 aspect-video rounded-2xl overflow-hidden shadow-md">
+					<img src="/images/school distro.jpg" alt="School supplies distribution EJBM campaign" class="w-full h-full object-cover" />
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
